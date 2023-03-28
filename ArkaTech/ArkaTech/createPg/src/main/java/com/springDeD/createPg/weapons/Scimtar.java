@@ -7,6 +7,11 @@
 
 public class Scimtar implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Scimtar";
 	private String damageDie = "1d6";
 	private String damageType = "Slashing";
 	private int weight = 3;

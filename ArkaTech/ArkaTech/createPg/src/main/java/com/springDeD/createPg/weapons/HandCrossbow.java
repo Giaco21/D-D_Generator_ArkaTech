@@ -7,6 +7,8 @@
 
 public class HandCrossbow implements Wieldable
 {
+	private String  name="HandCrossbow";
+
 	private String damageDie = "1d6";
 	private String damageType = "Piercing";
 	private int weight = 3;
@@ -16,7 +18,11 @@ public class HandCrossbow implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

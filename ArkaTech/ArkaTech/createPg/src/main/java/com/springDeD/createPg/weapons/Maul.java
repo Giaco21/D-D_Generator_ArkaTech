@@ -7,6 +7,11 @@
 
 public class Maul implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Maul";
 	private String damageDie = "2d6";
 	private String damageType = "Bludgeoning";
 	private int weight = 10;

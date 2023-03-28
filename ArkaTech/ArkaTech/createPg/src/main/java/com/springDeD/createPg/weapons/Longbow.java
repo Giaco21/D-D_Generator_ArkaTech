@@ -7,6 +7,11 @@
 
 public class Longbow implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Longbow";
 	private String damageDie = "1d8";
 	private String damageType = "Piercing";
 	private int weight = 2;

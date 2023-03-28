@@ -7,6 +7,7 @@
 
 public class Greataxe implements Wieldable
 {
+	private String  name="Greataxe";
 	private String damageDie = "1d12";
 	private String damageType = "Slashing";
 	private int weight = 7;
@@ -16,7 +17,11 @@ public class Greataxe implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

@@ -7,6 +7,11 @@ package com.springDeD.createPg.weapons;
 
 public class Mace implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Mace";
 	private String damageDie = "1d6";
 	private String damageType = "Bludgeoning";
 	private int weight = 4;

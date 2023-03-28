@@ -7,6 +7,11 @@
 
 public class Shortsword implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Shortsword";
 	private String damageDie = "1d6";
 	private String damageType = "Piercing";
 	private int weight = 2;

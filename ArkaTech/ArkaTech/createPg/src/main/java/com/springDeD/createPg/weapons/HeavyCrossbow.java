@@ -7,6 +7,12 @@
 
 public class HeavyCrossbow implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="HeavyCrossbow";
+
 	private String damageDie = "1d10";
 	private String damageType = "Piercing";
 	private int weight = 18;

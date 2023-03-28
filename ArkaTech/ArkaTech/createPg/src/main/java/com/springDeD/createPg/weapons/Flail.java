@@ -7,6 +7,7 @@
 
 public class Flail implements Wieldable
 {
+	private String  name="Flail";
 	private String damageDie = "1d8";
 	private String damageType = "Bludgeoning";
 	private int weight = 2;
@@ -16,7 +17,11 @@ public class Flail implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

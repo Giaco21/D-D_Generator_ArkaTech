@@ -7,6 +7,11 @@ package com.springDeD.createPg.weapons;
 
 public class Lance implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Lance";
 	private String damageDie = "1d12";
 	private String damageType = "Piercing";
 	private int weight = 6;

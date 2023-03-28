@@ -42,12 +42,12 @@
         </div> <img class='tokenImage'
             src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt="NFT" />
-        <h2>{{pg.name}}</h2>
-        <p class='description'>descrizione pg</p>
+        <h2>{{pg.characterName}}</h2>
+        <p class='description'>{{pg.description}}</p>
         <div class='info'>
             <div class="race">
-                <ins>Razza: </ins>
-                <p>Elfo</p>
+                <div>Razza: </div> 
+                <p>{{pg.race}}</p>
             </div>
             <div class="data">
                 <ins>◷</ins>
@@ -57,9 +57,14 @@
         <hr />
         <div class='analitics'>
             <ul>
-                <li>Forza</li>
-                <li>Vita</li>
-                <li>Liv</li>
+                <li>Forza
+                    <br>{{pg.CHA}}
+                </li>
+                <li>Vita
+                    <br>{{pg.DEX}}
+                </li>
+                <li>Liv <br>
+                1</li>
             </ul>
         </div>
     </div>

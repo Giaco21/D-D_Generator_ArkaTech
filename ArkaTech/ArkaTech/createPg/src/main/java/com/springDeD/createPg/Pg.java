@@ -12,11 +12,10 @@ import javax.persistence.GenerationType;
 @Entity
 @Table(name = "pg")
 public class Pg {
-    public Pg(Long id, Long userId, String characterName, String playerName, String race, String alignment, Integer classLevel, String background, String personalityTraits, String ideals, String bonds, String flaws, Integer XP, Integer STR, Integer strMod, Integer DEX, Integer dexMod, Integer CON, Integer conMod, Integer INT, Integer intMod, Integer WIS, Integer wisMod, Integer CHA, Integer chaMod, Integer passive, Integer profBonus, Integer initiative, Integer speed, Integer hpMax, Integer hdTotal, Integer HD, String raceBonuses, String raceAndFeatures, String featuresAndTraits, String aClass) {
+    public Pg(Long id, Long userId, String characterName, String race, String alignment, Integer classLevel, String background, String personalityTraits, String ideals, String bonds, String flaws, Integer XP, Integer STR, Integer strMod, Integer DEX, Integer dexMod, Integer CON, Integer conMod, Integer OINT, Integer intMod, Integer WIS, Integer wisMod, Integer CHA, Integer chaMod, Integer passive, Integer profBonus, Integer initiative, Integer speed, Integer hpMax, Integer hdTotal, Integer HD, String raceBonuses, String raceAndFeatures, String featuresAndTraits, String aClass) {
         this.id = id;
         this.userId = userId;
         this.characterName = characterName;
-        this.playerName = playerName;
         this.race = race;
         this.alignment = alignment;
         this.classLevel = classLevel;
@@ -32,7 +31,7 @@ public class Pg {
         this.dexMod = dexMod;
         this.CON = CON;
         this.conMod = conMod;
-        this.INT = INT;
+        this.OINT = OINT;
         this.intMod = intMod;
         this.WIS = WIS;
         this.wisMod = wisMod;
@@ -48,7 +47,7 @@ public class Pg {
         this.raceBonuses = raceBonuses;
         this.raceAndFeatures = raceAndFeatures;
         this.featuresAndTraits = featuresAndTraits;
-        Class = aClass;
+        this.Classe = aClass;
     }
 
     public Pg() {
@@ -63,9 +62,6 @@ public class Pg {
 
     @Column(name = "CharacterName")
     private String characterName;
-
-    @Column(name = "PlayerName")
-    private String playerName;
 
     @Column(name = "Race")
     private String race;
@@ -112,8 +108,8 @@ public class Pg {
     @Column(name = "CONmod")
     private Integer conMod;
 
-    @Column(name = "INT")
-    private Integer INT;
+    @Column(name = "OINT")
+    private Integer OINT;
 
     @Column(name = "INTmod")
     private Integer intMod;
@@ -160,8 +156,8 @@ public class Pg {
     @Column(name = "FeaturesAndTraits")
     private String featuresAndTraits;
 
-    @Column(name = "Class")
-    private String Class;
+    @Column(name = "Classe")
+    private String Classe;
 
     public Long getId() {
         return id;
@@ -185,14 +181,6 @@ public class Pg {
 
     public void setCharacterName(String characterName) {
         this.characterName = characterName;
-    }
-
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
     }
 
     public String getRace() {
@@ -315,12 +303,12 @@ public class Pg {
         this.conMod = conMod;
     }
 
-    public Integer getINT() {
-        return INT;
+    public Integer getOINT() {
+        return OINT;
     }
 
-    public void setINT(Integer iNT) {
-        INT = iNT;
+    public void setOINT(Integer iNT) {
+        OINT = iNT;
     }
 
     public Integer getIntMod() {
@@ -443,12 +431,12 @@ public class Pg {
         this.featuresAndTraits = featuresAndTraits;
     }
 
-    public String getaClass(){
-        return Class;
+    public String getaClasse(){
+        return Classe;
     }
 
-    public void setaClass(String aClass){
-        this.Class = Class;
+    public void setaClasse(String aClass){
+        this.Classe = Classe;
     }
    
 

@@ -7,6 +7,11 @@
 
 public class Net implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Net";
 	private String damageDie = "";
 	private String damageType = "";
 	private int weight = 3;

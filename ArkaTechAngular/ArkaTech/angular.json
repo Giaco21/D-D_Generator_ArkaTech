@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "arkaTch": {
+    "ArkaTech": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/arka-tch",
+            "outputPath": "dist/arka-tech",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "arkaTch:build:production"
+              "browserTarget": "ArkaTech:build:production"
             },
             "development": {
-              "browserTarget": "arkaTch:build:development"
+              "browserTarget": "ArkaTech:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "arkaTch:build"
+            "browserTarget": "ArkaTech:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "5bec8ea2-941e-489b-89a7-1d3822a72c0a"
+    "analytics": "9af3f1b4-79b4-4f18-91ab-2bc2a5b190e0"
   }
 }

@@ -7,6 +7,11 @@
 
 public class WarPick implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="WarPick";
 	private String damageDie = "1d8";
 	private String damageType = "Piercing";
 	private int weight = 2;

@@ -69,13 +69,11 @@
       align-items: center;
       .race {
         display: flex;
+        flex-direction: column;
         align-items: center;
         color: #ee83e5;
         font-weight: 700;
-        ins {
-          margin-left: -0.3rem;
-          margin-right: 0.5rem;
-        }
+      
       }
       .data {
         display: flex;

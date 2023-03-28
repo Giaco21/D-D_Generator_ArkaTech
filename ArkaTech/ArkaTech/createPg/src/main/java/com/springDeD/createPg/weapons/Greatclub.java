@@ -7,6 +7,7 @@
 
 public class Greatclub implements Wieldable
 {
+	private String  name="Greatclub";
 	private String damageDie = "1d8";
 	private String damageType = "Bludgeoning";
 	private int weight = 10;
@@ -16,7 +17,11 @@ public class Greatclub implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

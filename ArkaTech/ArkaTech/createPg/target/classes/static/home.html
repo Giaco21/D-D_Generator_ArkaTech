@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="styleMain.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div>
+            <img width="50px" height="50px" src="" alt="logo">
+        </div>
+        <ul>
+            <li>
+                Home
+            </li>
+            <li>
+                Crea un Pg
+            </li>
+            <li>
+                Dati Utente
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="main">
+    <section id="info-user">
+        <div class="card">
+            <div>
+                <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100"
+                                                        width="100" /></button>
+                <h3 class="name mt-3">User User</h3>
+                <h3 class="idd">@useruser</h3>
+                <div class="gap-2">
+                    <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span>
+                </div>
+                <div>
+                    <span class="number">1069 <span class="follow">Followers</span></span>
+                </div>
+                <div> <button class="btn1 btn-dark">Edit Profile</button> </div>
+                <div class="text">
+                        <span>User User is a creator of minimalistic x bold graphics and digital artwork.<br><br>
+                            Artist/ Creative Director by Day #NFT minting@ with FND night. </span>
+                </div>
+                <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
+                    <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span>
+                    <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span>
+                </div>
+                <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May,2021</span> </div>
+            </div>
+        </div>
+    </section>
+    <section id="containerCard">
+
+    </section>
+
+    <section id="createPg" style="background:white">
+        <h1>Crea Un Pg</h1>
+        <input type="text" placeholder="Enter text">
+        <button onClick="addPg()">Crea</button>
+
+    </section>
+</main>
+<script>
+        function addPg() {
+            const val = document.querySelector('input').value;
+            console.log(val);
+            var flag = confirm("Vuoi creare il pg? " + val)
+            fetch("http://localhost:8080/home",
+                {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body:val
+                }).then(result => result.text()).then(text => {
+                    alert(text);
+                    location.reload();
+                })
+        }
+
+
+
+        fetch('http://localhost:8080/home', { // fake API endpoint
+            method: 'GET',
+            // turn the JS object literal into a JSON string
+        })
+            .then(res => res.json())
+            .then(data => {
+                const containerCard = document.getElementById("containerCard");
+                containerCard.id = "containerCard";
+                document.body.appendChild(containerCard);
+                data.forEach(pg => {
+                    console.log(pg)
+                    const card = document.createElement("div");
+                    card.id = pg.id;
+                    containerCard.appendChild(card);
+
+                    const title = document.createElement("h2");
+                    title.innerText = pg.name;
+                    title.class = "title-card";
+                    card.appendChild(title);
+
+                    const containerAnalitistcs = document.createElement("div");
+                    containerAnalitistcs.class = "title-card";
+                    card.appendChild(containerAnalitistcs);
+
+                    pg.arrayStatistiche.forEach(stati => {
+                        var statistica = document.createElement("span");
+                        statistica.innerText = stati;
+                        containerAnalitistcs.appendChild(statistica);
+                    });
+
+                    const containerButton = document.createElement("div");
+                    card.appendChild(containerButton);
+
+                    const buttonShow = document.createElement("button");
+                    buttonShow.innerText = "Dettagli";
+                    containerButton.appendChild(buttonShow);
+                    buttonShow.onclick = function () { show(pg.id) };
+
+                    const buttonDelete = document.createElement("button");
+                    buttonDelete.innerText = "Elimina";
+                    containerButton.appendChild(buttonDelete);
+                    buttonDelete.onclick = function () { remove(pg.id, card) };
+                });
+                console.log(data)
+            })
+            .catch(err => {
+                console.error(err);
+            });
+
+        function show(id) {
+            fetch('http://localhost:8080/home/' + id, {
+                method: 'GET',
+                // turn the JS object literal into a JSON string
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert(data.name);
+                    console.log(data)
+                })
+        }
+
+        function remove(id, card) {
+            card.remove()
+            fetch('http://localhost:8080/home/' + id, {
+                method: 'DELETE',
+                // turn the JS object literal into a JSON string
+            })
+                .then(res => res.json())
+                .then(data => {
+
+                    console.log(data)
+                })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+
+m	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã§³8Š’õ½ñ0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãı‘şÿÿÿÿ
+n	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûœ¢Äıÿÿÿÿ8ø ê½ñ0
+y	java:S116"XRename this field "CharacterName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éø¦¼ıÿÿÿÿ8ØÓí½ñ0
+k	java:S116"PRename this field "Class" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÒ¬T8¾èñ½ñ0
+k	java:S116"ORename this field "Race" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊîÊ¸8ØÓí½ñ0
+p	java:S116"TRename this field "Alignment" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ·ÌÇ8ØÓí½ñ0
+q	java:S116 "URename this field "Background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å–Ñ8ØÓí½ñ0
+}	java:S116#"\Rename this field "PersonalityTraits" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”‡èƒüÿÿÿÿ8ØÓí½ñ0
+r	java:S116&"QRename this field "Ideals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯Ò…ûÿÿÿÿ8ØÓí½ñ0
+q	java:S116)"PRename this field "Bonds" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æı‘äùÿÿÿÿ8ØÓí½ñ0
+q	java:S116,"PRename this field "Flaws" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ë¹øûÿÿÿÿ8ÙÓí½ñ0
+{	java:S116/"ZRename this field "RaceAndFeatures" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õŞËşÿÿÿÿ8…èí½ñ0
+}	java:S1162"\Rename this field "FeaturesAndTraits" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù«¿Úùÿÿÿÿ8Öêï½ñ0

@@ -1,0 +1,25 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâ•Æþÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãý‘Žþÿÿÿÿ
+z
+java:S4165Ã"cRemove this useless assignment; "Class" already holds the assigned value along all execution paths.(þ¯³Ú
+b	java:S116_"MRename this field "XP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ÷Î‚
+c	java:S116b"NRename this field "STR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øâèþ
+h	java:S116h"NRename this field "DEX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è„¦üÿÿÿÿÿ
+c	java:S116n"NRename this field "CON" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î÷šÀ
+c	java:S116t"NRename this field "INT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êŒ¾›
+b	java:S116z"NRename this field "WIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ›²I
+i	java:S116€"NRename this field "CHA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÑ¿×þÿÿÿÿ
+c	java:S116˜"MRename this field "HD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ˜‡à
+e	java:S116¤"PRename this field "Class" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÒ¬T
+D
+java:S1172Â"-Remove this unused method parameter "aClass".(¨®Š„
+F
+java:S1656Ã"/Remove or correct this useless self-assignment.(þ¯³Ú

@@ -1,0 +1,28 @@
+<section>
+    <div class="login-box">
+        <h2>Registrati</h2>
+        <form  [formGroup]="addUserForm" (ngSubmit)="createUser()">
+          <div class="user-box">
+            <input type="text" name="" required="" formControlName="username">
+            <label>Username*</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="" required="" formControlName="email">
+            <label>Email*</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" required="" formControlName="password">
+            <label>Password*</label>
+          </div>
+          <button>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Registratti
+          </button>
+        </form>
+        <a href="/login">Hai già un account? </a>
+      </div>
+    
+</section>

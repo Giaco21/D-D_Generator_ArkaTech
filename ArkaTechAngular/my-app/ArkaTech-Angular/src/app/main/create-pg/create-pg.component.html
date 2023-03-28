@@ -1,0 +1,133 @@
+<app-spinner *ngIf="!flagLoadData"></app-spinner>
+  <div *ngIf="flagLoadData" class="container">
+
+    <main class="main">
+<!-- String alignment,
+Integer classLevel,
+Integer XP, Integer STR, Integer strMod, Integer DEX, Integer dexMod, Integer CON, Integer conMod, Integer INT,
+Integer intMod, Integer WIS, Integer wisMod, Integer CHA, Integer chaMod, Integer passive, Integer profBonus,
+Integer initiative, Integer speed, Integer hpMax, Integer hdTotal, Integer HD, String raceBonuses,
+String raceAndFeatures, String featuresAndTraits, String aClass)  -->
+        <button id="back" (click)="back()" style="width: 100px;text-align: left;" *ngIf="positionForm!=0">
+            Back
+            </button>
+
+         <form [formGroup]="createPgForm" (submit)="createPg()">
+
+
+        <fieldset *ngIf="positionForm ==0">
+            <legend><span class="number">1</span> Informazioni Base</legend>
+
+
+          <div>
+            <label for="name">Nome:</label>
+          <input type="text" id="name" name="nome" formControlName="characterName">
+          </div>
+
+          <div>
+            <label for="race">Razza:</label>
+          <select name="" id="race" formControlName="race">
+            <option *ngFor="let race of arrayRace" [value]="race" >
+                {{race}}
+            </option>
+          </select>
+          </div>
+          <div>
+            <label for="classes">Classe:</label>
+            <select name="" id="" formControlName="aClass">
+              <option *ngFor="let classes of arrayClasses" [value]="classes">
+                  {{classes }}
+              </option>
+            </select>
+         </div>
+          <div>
+             <label for="arrayAligmen">Liniaggio:</label>
+             <select name="" id="" formControlName="alignment">
+               <option *ngFor="let sligment of arrayAligmen" [value]="sligment">
+                   {{sligment }}
+               </option>
+             </select>
+          </div>
+
+          <div>
+            <label for="background">Background:</label>
+          <select name="" id=""  formControlName="background" (change)="getDataBgForType()">
+            <option *ngFor="let bg of arrayBackground" [value]="bg">
+                {{bg }}
+            </option>
+          </select>
+          </div>
+
+
+
+        </fieldset>
+        <fieldset *ngIf="positionForm ==1">
+
+          <legend><span class="number">2</span>Caratteristiche </legend>
+
+          <label for="STR">STR:</label>
+          <input type="number" [min]="3" [max]="20" maxlength="2" formControlName="STR"/>
+
+          <label for="DEX">DEX:</label>
+          <input type="number" [min]="3" [max]="20" maxlength="2" formControlName="DEX"/>
+
+          <label for="CON">CON:</label>
+          <input type="number" [min]="3" [max]="20" maxlength="2" formControlName="CON"/>
+
+          <label for="INT">INT:</label>
+          <input type="number" [min]="3" [max]="20" maxlength="2" formControlName="INT"/>
+
+          <label for="WIS">WIS:</label>
+          <input type="number" [min]="3" [max]="20" maxlength="2" formControlName="WIS"/>
+
+          <label for="CHA">CHA:</label>
+          <input type="number" [min]="3" [max]="20" maxlength="2" formControlName="CHA"/>
+
+
+        </fieldset>
+
+        <fieldset *ngIf="positionForm ==2">
+
+          <legend><span class="number">3</span>Tratti personali          </legend>
+
+          <label for="personalityTraits">Tratti Personali:</label>
+          <select name="" id=""  formControlName="personalityTraits" >
+            <option *ngFor="let bgType of arrayBackgroundText.personalityTraits" [value]="bgType">
+                {{bgType }}
+            </option>
+          </select>
+
+          <label for="ideals">Ideali:</label>
+          <select name="ideals" id="ideals"  formControlName="ideals" >
+            <option *ngFor="let bgType of arrayBackgroundText.ideals" [value]="bgType">
+                {{bgType }}
+            </option>
+          </select>
+
+          <label for="bonds">Legami:</label>
+          <select name="" id=""  formControlName="bonds" >
+            <option *ngFor="let bgType of arrayBackgroundText.bonds" [value]="bgType">
+                {{bgType}}
+            </option>
+          </select>
+
+          <label for="flaws">Difetti:</label>
+          <select name="" id=""  formControlName="flaws" >
+            <option *ngFor="let bgType of arrayBackgroundText.flaws" [value]="bgType">
+                {{bgType}}
+            </option>
+          </select>
+
+        </fieldset>
+
+
+          <div *ngIf="positionForm >2">
+            <h2>Hai Inserito tutti i dati Utili</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque itaque veritatis omnis exercitationem, assumenda nihil. Blanditiis aspernatur magnam, ullam necessitatibus delectus modi veniam laboriosam sequi, nam tempora sunt, exercitationem dicta?</p>
+          </div>
+          <button  type="submit" *ngIf="positionForm >2">Crea Personaggio</button>
+
+        </form>
+        <button *ngIf="positionForm <=2" (click)="next()">Prossimo Step</button>
+    </main>
+  </div>

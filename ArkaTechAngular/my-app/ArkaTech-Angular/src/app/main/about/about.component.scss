@@ -1,0 +1,37 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   min-height: 80vh;
+   .card{
+    width: 300px;
+   color: white;
+   margin: 10px;
+    .img{
+     width: 300px;
+     height: 230px;
+        background-position: center;
+        background-size: cover;
+        
+    }
+     .txt{
+        
+         text-align: center;
+         h4{
+             padding: 10px 0px;
+         }
+         button{
+            background-color: rgb(53, 47, 59);
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+            color:white;
+         }
+         background-color: rgb(35, 33, 54);
+         padding: 25px;
+ 
+     }
+   }
+}

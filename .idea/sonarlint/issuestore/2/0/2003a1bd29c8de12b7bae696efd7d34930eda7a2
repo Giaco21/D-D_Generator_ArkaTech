@@ -1,0 +1,11 @@
+
+J
+java:S3740."/Provide the parametrized type for this generic.(æ€³ªüÿÿÿÿ
+J
+java:S37401"/Provide the parametrized type for this generic.(º‡ıöûÿÿÿÿ
+o
+java:S1104"YMake pGsRepository a static final constant or non-public and provide accessors if needed.(ˆ›ÿŒ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãı‘şÿÿÿÿ
+l	java:S116"WRename this field "PgRepository" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÓ±
+[
+java:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(Ä™¶¾ÿÿÿÿÿ

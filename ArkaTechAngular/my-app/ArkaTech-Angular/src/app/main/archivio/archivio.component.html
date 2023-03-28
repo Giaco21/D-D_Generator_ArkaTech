@@ -1,0 +1,6 @@
+<div id="main">
+    <app-spinner *ngIf="!flagDownloadData"></app-spinner>
+    <section *ngIf="flagDownloadData">
+        <app-card-pg *ngFor="let pg of arrayPg" [pg]="pg"></app-card-pg>
+    </section>
+</div>

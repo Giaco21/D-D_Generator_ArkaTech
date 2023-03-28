@@ -1,0 +1,15 @@
+<div id="containerHome">
+   <header>
+    <app-header></app-header>
+   </header>
+    <main id="body">
+       <router-outlet></router-outlet>
+    </main>
+    <div id="compare">
+      <button (click)="openPopUp()" *ngIf="!flagPopUp">Open me</button>
+      <button (click)="closePopUp()" *ngIf="flagPopUp">Close me</button>
+      <div  id="popUp" *ngIf="flagPopUp">
+
+      </div>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+body{
+background:url("https://cdn.shopify.com/s/files/1/0460/6269/8661/products/Mahersilverblacklifestyle_5000x.jpg?v=1620267323");
+ background-position: center;
+    background-size: cover;
+    background-position: fixed;
+    min-height: 100vh;
+
+
+}
+header>nav{
+background-color:black;
+color:white;
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:10px;
+}
+
+header>nav>ul>li{
+    display:inline;
+    list-style-type:none;
+    padding:10px;
+}
+header>nav>ul>li:hover,header>nav>ul>li:active{
+transition-duration: 0.5s;
+    color:black;
+    background-color:whitesmoke;
+    transition-duration: 0.5s;
+
+}
+#main{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    min-height:90vh;
+}
+#main>#info-user .card {
+        width: 350px;
+        background-color: #efefef;
+        border: none;
+        cursor: pointer;
+        transition: all 0.5s;
+        padding:30px 20px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+
+    }
+#main>#info-user .image img {
+        transition: all 0.5s
+    }
+#main>#info-user .card:hover .image img {
+        transform: scale(1.5)
+    }
+
+#main>#info-user .btn {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%
+    }
+
+#main>#info-user .name {
+        font-size: 22px;
+        font-weight: bold
+    }
+
+#main>#info-user .idd {
+        font-size: 14px;
+        font-weight: 600
+    }
+
+#main>#info-user .idd1 {
+        font-size: 12px
+    }
+
+#main>#info-user .number {
+        font-size: 22px;
+        font-weight: bold
+    }
+
+#main>#info-user .follow {
+        font-size: 12px;
+        font-weight: 500;
+        color: #444444
+    }
+
+#main>#info-user .btn1 {
+        height: 40px;
+        width: 150px;
+        border: none;
+        background-color: #000;
+        color: #aeaeae;
+        font-size: 15px
+    }
+
+#main>#info-user .text span {
+        font-size: 13px;
+        color: #545454;
+        font-weight: 500
+    }
+#main>#info-user .icons i {
+        font-size: 19px
+    }
+
+   #main>#info-user hr .new1 {
+        border: 1px solid
+    }
+
+#main>#info-user  .join {
+        font-size: 14px;
+        color: #a0a0a0;
+        font-weight: bold
+    }
+
+#main>#info-user .date {
+        background-color: #ccc
+    }
+}
+
+#box {
+  width:150px;
+  height:100px;
+  background:black;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#containerCard{
+background-color:white;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+padding:10px;
+}
+#containerCard>div{
+ width:350px;
+ padding:20px;
+ background-color:whitesmoke;
+ margin:20px;
+}

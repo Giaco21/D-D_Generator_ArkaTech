@@ -34,7 +34,7 @@ String raceAndFeatures, String featuresAndTraits, String aClass)  -->
           </div>
           <div>
             <label for="classes">Classe:</label>
-            <select name="" id="" formControlName="aClass">
+            <select name="" id="" formControlName="aClass" (change)="getDataClassesForType()">
               <option *ngFor="let classes of arrayClasses" [value]="classes">
                   {{classes }}
               </option>

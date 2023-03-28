@@ -11,6 +11,7 @@ import { PgServiceService } from 'src/app/service/pg-service.service';
 })
 export class CreatePgComponent {
   flagLoadData: boolean = false;
+  arrayClassesAtr: any;
   constructor(public pgService: PgServiceService, private http: HttpClient) {}
   createPgForm = new FormGroup({
     characterName: new FormControl('', [Validators.required]),
@@ -36,7 +37,7 @@ export class CreatePgComponent {
   getCharacterName() {
     return this.createPgForm.controls['characterName'].value;
   }
-  getaClass() {
+  getaClasse() {
     return this.createPgForm.controls['aClass'].value;
   }
   getAlignment() {
@@ -138,6 +139,7 @@ export class CreatePgComponent {
   async getDataClasses() {
     this.http.get('http://localhost:8080/classes').subscribe((response) => {
       this.arrayClasses = response;
+      console.log(this.arrayClasses)
     });
   }
   getDataClassesForType() {
@@ -151,10 +153,10 @@ export class CreatePgComponent {
         )
         .subscribe((response) => {
           console.log(response);
-          this.arrayBackgroundText = response;
+          this.arrayClassesAtr = response;
         });
     }
-    console.log(name);
+    console.log(this.arrayClassesAtr);
   }
   //bg
   async getDataBg() {
@@ -219,10 +221,10 @@ export class CreatePgComponent {
     // });
 
     let jsonPg: any = {
-      id: this.getNum() + this.getNum(),
+     
       userId: this.user.id,
       characterName: this.getCharacterName(),
-      aClass: this.getaClass(),
+      classe: this.getaClasse(),
       race: this.getRace(),
       background: this.createPgForm.controls['background'].value,
       alignment: this.getAlignment(),
@@ -254,7 +256,6 @@ export class CreatePgComponent {
       raceBonuses: 'raceBonusesidentifierName',
       raceAndFeatures: 'raceAndFeaturesidentifierName',
       featuresAndTraits: 'featuresAndTraitsidentifierName',
-      Class: 'aClassidentifierName',
       description:
         "First of all their character is NOT as dumb as is humanly possible which is 3, 3, 3 and even staying within that doesn't have to mean they are 'damaged' to the point of almost being an animal.",
     };
@@ -275,7 +276,7 @@ export class CreatePgComponent {
   saveCharacterData() {
     const characterData = {
       characterName: this.getCharacterName(),
-      aClass: this.getaClass(),
+      aClass: this.getaClasse(),
       race: this.getRace(),
       background: this.createPgForm.controls['background'].value,
       alignment: this.getAlignment(),

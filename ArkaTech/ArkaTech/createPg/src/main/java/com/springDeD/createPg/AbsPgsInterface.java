@@ -181,7 +181,7 @@ public abstract class AbsPgsInterface implements PgRepository {
                 Pg.setRaceBonuses(resultSet.getString("RaceBonuses"));
                 Pg.setRaceAndFeatures(resultSet.getString("RaceAndFeatures"));
                 Pg.setFeaturesAndTraits(resultSet.getString("FeaturesAndTraits"));
-                Pg.setaClass(resultSet.getString("Classe"));
+                Pg.setaClasse(resultSet.getString("Classe"));
 
 
 

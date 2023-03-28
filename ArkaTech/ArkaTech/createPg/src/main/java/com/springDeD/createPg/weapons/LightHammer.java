@@ -7,6 +7,11 @@ package com.springDeD.createPg.weapons;
 
 public class LightHammer implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="LightHammer";
 	private String damageDie = "1d4";
 	private String damageType = "Bludgeoning";
 	private int weight = 2;

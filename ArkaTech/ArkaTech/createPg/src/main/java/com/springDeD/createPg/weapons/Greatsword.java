@@ -7,6 +7,7 @@ package com.springDeD.createPg.weapons;
 
 public class Greatsword implements Wieldable
 {
+	private String  name="Greatsword";
 	private String damageDie = "2d6";
 	private String damageType = "Slashing";
 	private int weight = 6;
@@ -16,7 +17,11 @@ public class Greatsword implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

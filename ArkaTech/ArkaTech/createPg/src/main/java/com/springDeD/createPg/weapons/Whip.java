@@ -6,6 +6,11 @@ package com.springDeD.createPg.weapons;
 
 public class Whip implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Whip";
 	private String damageDie = "1d4";
 	private String damageType = "Slashing";
 	private int weight = 3;

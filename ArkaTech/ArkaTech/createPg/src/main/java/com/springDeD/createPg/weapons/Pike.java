@@ -7,6 +7,11 @@
 
 public class Pike implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Pike";
 	private String damageDie = "1d10";
 	private String damageType = "Piercing";
 	private int weight = 18;

@@ -7,6 +7,7 @@
 
 public class Battleaxe implements Wieldable
 {
+	private String  name="Battleaxe";
 	private String damageDie = "1d8";
 	private String damageType = "Slashing";
 	private int weight = 4;
@@ -16,7 +17,15 @@ public class Battleaxe implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

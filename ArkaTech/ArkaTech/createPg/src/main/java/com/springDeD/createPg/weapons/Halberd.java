@@ -7,6 +7,7 @@
 
 public class Halberd implements Wieldable
 {
+	private String  name="Greatsword";
 	private String damageDie = "1d10";
 	private String damageType = "Slashing";
 	private int weight = 6;
@@ -16,7 +17,11 @@ public class Halberd implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

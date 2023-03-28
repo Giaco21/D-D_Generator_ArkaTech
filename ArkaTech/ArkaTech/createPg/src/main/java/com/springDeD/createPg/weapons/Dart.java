@@ -8,6 +8,7 @@
 
 public class Dart implements Wieldable
 {
+	private String  name="Dart";
 	private String damageDie = "1d4";
 	private String damageType = "Piercing";
 	private int weight = 1/4;
@@ -17,7 +18,11 @@ public class Dart implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

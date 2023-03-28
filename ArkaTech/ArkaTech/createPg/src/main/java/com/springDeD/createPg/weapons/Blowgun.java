@@ -7,6 +7,7 @@
 
 public class Blowgun implements Wieldable
 {
+	private String  name="Blowgun";
 	private String damageDie = "1";
 	private String damageType = "Piercing";
 	private int weight = 1;
@@ -16,7 +17,15 @@ public class Blowgun implements Wieldable
 	{
 		
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getDamageDie()
 	{
 		return this.damageDie;

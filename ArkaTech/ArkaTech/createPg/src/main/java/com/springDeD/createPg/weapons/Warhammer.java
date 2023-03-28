@@ -7,6 +7,11 @@
 
 public class Warhammer implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Warhammer";
 	private String damageDie = "1d8";
 	private String damageType = "Bludgeoning";
 	private int weight = 2;

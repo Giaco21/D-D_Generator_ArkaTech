@@ -7,6 +7,11 @@
 
 public class Sling implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Sling";
 	private String damageDie = "1d4";
 	private String damageType = "Bludgeoning";
 	private int weight = 0;

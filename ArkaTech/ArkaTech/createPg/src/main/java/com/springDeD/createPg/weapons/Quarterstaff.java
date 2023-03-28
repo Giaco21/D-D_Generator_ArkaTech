@@ -7,6 +7,11 @@
 
 public class Quarterstaff implements Wieldable
 {
+	public String getName() {
+		return name;
+	}
+
+	private String  name="Quarterstaff";
 	private String damageDie = "1d6";
 	private String damageType = "Bludgeoning";
 	private int weight = 4;

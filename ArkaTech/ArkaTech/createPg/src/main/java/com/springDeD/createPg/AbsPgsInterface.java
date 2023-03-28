@@ -150,7 +150,6 @@ public abstract class AbsPgsInterface implements PgRepository {
                 Pg.setId (resultSet.getLong ("id"));
                 Pg.setUserId (resultSet.getLong ("IDuser"));
                 Pg.setCharacterName(resultSet.getString("CharacterName"));
-                Pg.setPlayerName(resultSet.getString("PLayerName"));
                 Pg.setRace(resultSet.getString("Race"));
                 Pg.setAlignment(resultSet.getString("Alignment"));
                 Pg.setClassLevel(resultSet.getInt("ClassLevel"));
@@ -166,7 +165,7 @@ public abstract class AbsPgsInterface implements PgRepository {
                 Pg.setDexMod(resultSet.getInt("DEXmod"));
                 Pg.setCON(resultSet.getInt("CON"));
                 Pg.setConMod(resultSet.getInt("CONmod"));
-                Pg.setINT(resultSet.getInt("OINT"));
+                Pg.setOINT(resultSet.getInt("OINT"));
                 Pg.setIntMod(resultSet.getInt("INTmod"));
                 Pg.setWIS(resultSet.getInt("WIS"));
                 Pg.setWisMod(resultSet.getInt("WISmod"));
@@ -182,7 +181,7 @@ public abstract class AbsPgsInterface implements PgRepository {
                 Pg.setRaceBonuses(resultSet.getString("RaceBonuses"));
                 Pg.setRaceAndFeatures(resultSet.getString("RaceAndFeatures"));
                 Pg.setFeaturesAndTraits(resultSet.getString("FeaturesAndTraits"));
-                Pg.setaClass(resultSet.getString("Class"));
+                Pg.setaClass(resultSet.getString("Classe"));
 
 
 

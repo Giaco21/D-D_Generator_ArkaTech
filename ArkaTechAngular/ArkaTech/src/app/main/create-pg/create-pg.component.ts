@@ -221,10 +221,10 @@ export class CreatePgComponent {
     // });
 
     let jsonPg: any = {
-     
+
       userId: this.user.id,
       characterName: this.getCharacterName(),
-      classe: this.getaClasse(),
+      aClasse: this.getaClasse(),
       race: this.getRace(),
       background: this.createPgForm.controls['background'].value,
       alignment: this.getAlignment(),

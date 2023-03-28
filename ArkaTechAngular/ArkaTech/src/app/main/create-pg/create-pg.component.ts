@@ -247,6 +247,7 @@ getNum(){
       INT: this.createPgForm.controls['INT'].value,
       WIS: this.createPgForm.controls['WIS'].value,
       CHA: this.createPgForm.controls['CHA'].value,
+      description: "First of all their character is NOT as dumb as is humanly possible which is 3, 3, 3 and even staying within that doesn't have to mean they are 'damaged' to the point of almost being an animal."
     }
 
     let jsondb = {

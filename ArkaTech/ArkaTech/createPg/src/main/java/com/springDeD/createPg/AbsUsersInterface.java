@@ -99,13 +99,13 @@ public abstract class AbsUsersInterface implements UserRepository {
 
         List<User> userList = new ArrayList<> ();
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnddb", "root", "Cucina21");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnd", "root", "Vivident.root");
              PreparedStatement statement = connection.prepareStatement("");
              ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
                 User user = new User();
-                user.setId (resultSet.getLong ("Id"));
+                user.setId (resultSet.getLong ("ID"));
                 user.setUsername (resultSet.getString("Username"));
                 user.setEmail(resultSet.getString("Email"));
                 user.setPassword (resultSet.getString("Password"));
@@ -137,7 +137,7 @@ public abstract class AbsUsersInterface implements UserRepository {
     public List<User> findAll() {
         List<User> userList = new ArrayList<> ();
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnddb", "root", "Cucina21");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnd", "root", "Vivident.root");
              PreparedStatement statement = connection.prepareStatement("SELECT * FROM users");
              ResultSet resultSet = statement.executeQuery()) {
 

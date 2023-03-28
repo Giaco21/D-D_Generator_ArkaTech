@@ -140,7 +140,7 @@ public abstract class AbsPgsInterface implements PgRepository {
     public List<Pg> findAll() {
         List<Pg> PgList = new ArrayList<> ();
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnddb", "root", "Cucina21");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnd", "root", "Vivident.root");
              PreparedStatement statement = connection.prepareStatement("SELECT * FROM pg");
              ResultSet resultSet = statement.executeQuery()) {
                 

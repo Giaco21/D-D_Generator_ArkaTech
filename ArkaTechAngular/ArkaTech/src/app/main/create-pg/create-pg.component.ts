@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import * as saveAs from 'file-saver';
+// import * as saveAs from 'file-saver';
 import { PgServiceService } from 'src/app/service/pg-service.service';
 
 @Component({
@@ -321,6 +321,6 @@ getNum(){
 
     const fileContent = JSON.stringify(characterData);
     const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
-    saveAs(blob, `${this.getCharacterName()}.txt`);
+    // saveAs(blob, `${this.getCharacterName()}.txt`);
   }
 }

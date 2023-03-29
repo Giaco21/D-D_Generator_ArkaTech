@@ -434,11 +434,7 @@ public class Pg {
     public String getaClasse(){
         return aClasse;
     }
-
-    public void setaClasse(String aClass){
+    public void setaClasse(String aClasse) {
         this.aClasse = aClasse;
     }
-   
-
-    
 }

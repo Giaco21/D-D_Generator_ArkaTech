@@ -211,13 +211,17 @@ export class CreatePgComponent {
     return num;
   }
   fileUrl:any;
-  createPg() {
-   
+  createPg() {  
      this.jsonPg = {
      
       userId: this.user.id,
       characterName: this.getCharacterName(),
       aclasse: this.getaClasse(),
+    let jsonPg: any = {
+
+      userId: this.user.id,
+      characterName: this.getCharacterName(),
+      aClasse: this.getaClasse(),
       race: this.getRace(),
       background: this.createPgForm.controls['background'].value,
       alignment: this.getAlignment(),

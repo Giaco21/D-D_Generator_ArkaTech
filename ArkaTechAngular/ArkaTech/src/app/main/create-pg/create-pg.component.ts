@@ -76,7 +76,7 @@ export class CreatePgComponent {
     return this.createPgForm.controls['CHA'].value;
   }
   positionForm: number = 0;
-   jsonPg: any 
+   jsonPg: any
   arrayBackground: any;
   arrayRace: any;
   arrayAligmen: any = [' N', 'L/N', 'L/B', 'L/M', 'C/M', 'C/B', 'C/N'];
@@ -211,13 +211,8 @@ export class CreatePgComponent {
     return num;
   }
   fileUrl:any;
-  createPg() {  
+  createPg() {
      this.jsonPg = {
-     
-      userId: this.user.id,
-      characterName: this.getCharacterName(),
-      aclasse: this.getaClasse(),
-    let jsonPg: any = {
 
       userId: this.user.id,
       characterName: this.getCharacterName(),
@@ -268,7 +263,7 @@ export class CreatePgComponent {
       });
 
     console.log(this.jsonPg);
-   
+
   }
 
   saveCharacterData() {

@@ -131,3 +131,9 @@ String raceAndFeatures, String featuresAndTraits, String aClass)  -->
         <button *ngIf="positionForm <=2" (click)="next()">Prossimo Step</button>
     </main>
   </div>
+  <div class="col-md-4 text-right">
+    <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
+</div>
+  <div class="col-md-8" id="htmlData">
+    <app-card-pg [pg]="jsonPg"></app-card-pg>
+</div>

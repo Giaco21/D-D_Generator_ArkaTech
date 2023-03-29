@@ -9,12 +9,5 @@ import java.util.Optional;
 @Repository
 public interface PgRepository extends JpaRepository<Pg, Long> {
 
-    Optional<Pg> findByPgname(String Pgname);
-
-    Optional<Pg> findByEmail(String email);
-
-    boolean existsByPgname(String Pgname);
-
-    boolean existsByEmail(String email);
-
+    
 }

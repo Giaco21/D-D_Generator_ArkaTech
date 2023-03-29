@@ -432,9 +432,8 @@ public class Pg {
     }
 
     public String getaClasse(){
-        return this.aClasse;
+        return aClasse;
     }
-
     public void setaClasse(String aClasse) {
         this.aClasse = aClasse;
     }

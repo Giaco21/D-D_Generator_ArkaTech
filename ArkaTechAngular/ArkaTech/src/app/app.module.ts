@@ -19,6 +19,7 @@ import { HttpClient } from '@angular/common/http';
 import { AboutComponent } from './main/about/about.component';
 import { SpinnerComponent } from './animation/spinner/spinner.component';
 import { CompareComponent } from './main/compare/compare.component';
+import { DetailsPgComponent } from './main/details-pg/details-pg.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { CompareComponent } from './main/compare/compare.component';
     HomeLogComponent,
     AboutComponent,
     SpinnerComponent,
-    CompareComponent
+    CompareComponent,
+    DetailsPgComponent
   ],
   imports: [ 
     BrowserModule,

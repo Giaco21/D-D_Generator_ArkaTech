@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-
 @Component({
   selector: 'app-details-pg',
   templateUrl: './details-pg.component.html',
@@ -18,6 +17,11 @@ user:any
 constructor(private route: ActivatedRoute,private http:HttpClient) {
   
 }
+
+pickValueFromAlert(flag: boolean){
+  console.log(flag)
+}
+
 async ngOnInit() {
   this.route.params.subscribe((params:any) => {
     this.id = params["id"]
@@ -28,17 +32,19 @@ async ngOnInit() {
   this.http.get('http://localhost:8080/pg').subscribe(
     (response: any) =>{
       arrayPg = response
+      arrayPg = arrayPg.filter((ele:any)=>
+        ele.userId==this.user.id 
+       )
+       console.log(this.user)
       for (let i = 0; i < arrayPg.length; i++) {
         if (arrayPg[i].id==this.id) {
-          i==0?  this.pgPrevId=arrayPg[arrayPg.length-1]:this.pgPrevId=arrayPg[i-1].id
+          i==0?  this.pgPrevId=arrayPg[arrayPg.length-1].id:this.pgPrevId=arrayPg[i-1].id
           this.pg = arrayPg[i]
-          i==arrayPg.length-1? this.pgNextId=arrayPg[0]:this.pgNextId=arrayPg[i+1].id
+          i==arrayPg.length-1? this.pgNextId=arrayPg[0].id:this.pgNextId=arrayPg[i+1].id
         }
         
       }
-      this.pg = arrayPg.filter((ele:any)=>
-        ele.id==this.id 
-       )[0]
+      
       console.log(this.pg)
       console.log(response)
     }

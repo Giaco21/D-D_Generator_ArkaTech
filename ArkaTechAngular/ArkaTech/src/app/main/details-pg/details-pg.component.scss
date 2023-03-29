@@ -18,12 +18,20 @@ a:hover {
 }
 
 .movie-card {
+  transition-timing-function: ease-in;
+
+  /* Quick on the way out */
+  transition: 2s;
+
   font: 14px/22px "Lato", Arial, sans-serif;
   color: #A9A8A3;
   padding: 40px 0;
   position: relative;
+ 
+ 
 }
 #download-button{
+ 
   svg{
 
     transition-duration: 0.5s;
@@ -45,13 +53,15 @@ a:hover {
  }
 }
 .container {
+ 
+  /* Hide thing by pushing it outside by default */
   margin: 0 auto;
   max-width: 780px;
   width: 100vw;
- 
+ height: 900px;
   background: #F0F0ED;
   border-radius: 5px;
-  position: relative;
+
 }
 
 .hero {
@@ -189,7 +199,7 @@ a:hover {
   padding-top: 30px;
   margin-left: 20px;
   width: 480px;
-  overflow-y: scroll;
+ 
   max-height: 400px;
   color:rgb(77, 75, 75);
   label{
@@ -198,8 +208,8 @@ a:hover {
 }
 
 .statics {
-    top: 20px;
-    
+  position: relative;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     &>div{

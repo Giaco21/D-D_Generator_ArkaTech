@@ -20,6 +20,8 @@ import { AboutComponent } from './main/about/about.component';
 import { SpinnerComponent } from './animation/spinner/spinner.component';
 import { CompareComponent } from './main/compare/compare.component';
 import { DetailsPgComponent } from './main/details-pg/details-pg.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AlertComponent } from './dialog/alert/alert.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +38,15 @@ import { DetailsPgComponent } from './main/details-pg/details-pg.component';
     AboutComponent,
     SpinnerComponent,
     CompareComponent,
-    DetailsPgComponent
+    DetailsPgComponent,
+    AlertComponent,
   ],
   imports: [ 
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   
 
   ],

@@ -47,7 +47,7 @@ public class Pg {
         this.raceBonuses = raceBonuses;
         this.raceAndFeatures = raceAndFeatures;
         this.featuresAndTraits = featuresAndTraits;
-        this.Classe = aClass;
+        this.aClasse = aClass;
     }
 
     public Pg() {
@@ -157,7 +157,7 @@ public class Pg {
     private String featuresAndTraits;
 
     @Column(name = "Classe")
-    private String Classe;
+    private String aClasse;
 
     public Long getId() {
         return id;
@@ -432,11 +432,11 @@ public class Pg {
     }
 
     public String getaClasse(){
-        return Classe;
+        return aClasse;
     }
 
     public void setaClasse(String aClass){
-        this.Classe = Classe;
+        this.aClasse = aClasse;
     }
    
 

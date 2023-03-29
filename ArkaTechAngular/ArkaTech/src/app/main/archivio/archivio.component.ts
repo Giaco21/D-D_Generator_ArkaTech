@@ -75,17 +75,12 @@ export class ArchivioComponent {
     this.httpClient.get('http://localhost:8080/pg').subscribe(
       response =>{
         this.arrayPg = response
-        for(let i=0; i <  JSON.parse(localStorage.getItem("arrayPg") || "[]").length; i++ ){
-
-          this.arrayPg.push(JSON.parse(localStorage.getItem("arrayPg") || "[]")[ i ]);
-
-        }
+      
         this.arrayPg = this.arrayPg.filter((ele:any)=>ele.userId==1)
         console.log(this.arrayPg)
         console.log(response)
       }
     )
-    this.arrayPg = JSON.parse(localStorage.getItem("arrayPg") || "[]");
-        console.log(this.arrayPg)
+   
     }
 }

@@ -224,7 +224,7 @@ export class CreatePgComponent {
      
       userId: this.user.id,
       characterName: this.getCharacterName(),
-      classe: this.getaClasse(),
+      aclasse: this.getaClasse(),
       race: this.getRace(),
       background: this.createPgForm.controls['background'].value,
       alignment: this.getAlignment(),

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input} from '@angular/core';
 
 @Component({
@@ -7,21 +8,18 @@ import { Component, Input} from '@angular/core';
 })
 export class CardPgComponent {
   @Input() pg:any;
-  arrayPg: any;
+ 
   ngOnInit(){}
-
+  constructor(private http:HttpClient){}
   delete(id:string){
-  //   fetch(`http://localhost:8080/pg/${id}`, 
-  //   {  method: "DELETE"})
-  //   .then(response => {
-  //       console.log(response.status); 
-  //       window.location.href="http://localhost:4200/archivio"
-  //     }).catch(error=>(console.log(error)));   
-      this.arrayPg =  JSON.parse(localStorage.getItem("arrayPg") || "[]");
-      this.arrayPg= this.arrayPg.filter((ele:any)=>ele.id!=this.pg.id)
-      localStorage.setItem("arrayPg", JSON.stringify(this.arrayPg));
-      console.log(this.arrayPg)
-      location.href="http://localhost:4200/archivio"
+  
+  this.http.delete(`http://localhost:8080/pg/${id}`)
+  .subscribe((responce) => {
+    alert('Delete successful')
+    console.log(responce)
+    location.href="http://localhost:4200/archivio"
+  }
+    );
   }
   arrayCompare:any = []
 

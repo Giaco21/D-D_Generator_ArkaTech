@@ -40,4 +40,21 @@ public class PgController extends AbsPgsInterface {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @CrossOrigin(origins = "http://localhost:4200/")
+    @DeleteMapping("/pg/{id}")
+    public boolean deleteUser(@PathVariable Long id) {
+        try {
+            String sql = "DELETE FROM pg WHERE id="+id;
+            jdbcTemplate.update(sql);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private boolean pgisPresent() {
+        return false;
+    }
 }

@@ -212,16 +212,7 @@ export class CreatePgComponent {
   }
   fileUrl:any;
   createPg() {
-    /** Usage returns typed data */
-    // const data = fetch(`http://localhost:8080/pg`, {
-    //   method: "POST",
-    //   body: "Simon" ,
-    // }).then((res) => {
-    //   window.location.href="http://localhost:4200/archivio"
-
-    //   console.log(res)
-    // });
-
+   
      this.jsonPg = {
      
       userId: this.user.id,
@@ -273,10 +264,7 @@ export class CreatePgComponent {
       });
 
     console.log(this.jsonPg);
-    const data = 'some text';
-    const blob = new Blob([this.jsonPg], { type: 'application/octet-stream' });
-
-    this.fileUrl = window.URL.createObjectURL(blob);
+   
   }
 
   saveCharacterData() {

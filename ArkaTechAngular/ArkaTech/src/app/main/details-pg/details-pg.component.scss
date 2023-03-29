@@ -313,5 +313,7 @@ a[data-tooltip][data-placement="top"]::after {
   padding: 10px;
   svg{
     width: 60px;
+    fill: white;
+    stroke: white;
   }
 }

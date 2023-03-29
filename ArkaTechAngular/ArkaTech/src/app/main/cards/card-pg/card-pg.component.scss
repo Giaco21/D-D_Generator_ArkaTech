@@ -1,9 +1,10 @@
 .nft {
   user-select: none;
   max-width: 300px;
-  margin: 5rem auto;
+  margin: 20px auto;
   border: 1px solid #ffffff22;
   background-color: #282c34;
+  z-index: 999;
   background: linear-gradient(
     0deg,
     rgb(61, 67, 78) 0%,
@@ -31,28 +32,11 @@
   }
   .main {
     position: relative;
-    #buttonsAction {
-     position: relative;
-     width: 100%;
-      & > button:first-child{
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        background-color: transparent;
-        border: none;
-      }
-      &>button:last-child{
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        background-color: transparent;
-        border: none;
-      }
-    }
+   
     display: flex;
     flex-direction: column;
     width: 90%;
-    padding: 1rem;
+  
     .tokenImage {
       border-radius: 0.5rem;
       max-width: 100%;

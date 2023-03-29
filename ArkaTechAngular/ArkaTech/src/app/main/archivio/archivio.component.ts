@@ -83,4 +83,17 @@ export class ArchivioComponent {
     )
    
     }
+    addInCompare(pg:any){
+
+    }
+    delete(id:string){
+  
+      this.httpClient.delete(`http://localhost:8080/pg/${id}`)
+      .subscribe((responce) => {
+        alert('Delete successful')
+        console.log(responce)
+        this.getData()
+      }
+        );
+      }
 }

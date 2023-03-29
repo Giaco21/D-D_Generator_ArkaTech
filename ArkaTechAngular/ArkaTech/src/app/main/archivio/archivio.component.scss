@@ -7,8 +7,28 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+      
+        #buttonsAction {
+            position: relative;
+            width: 100%;
+            z-index: 999999999;
+             & > button:first-child{
+               position: absolute;
+               left: 10px;
+               top: 10px;
+               background-color: transparent;
+               border: none;
+             }
+             &>button:last-child{
+               position: absolute;
+               right: 10px;
+               top: 10px;
+               background-color: transparent;
+               border: none;
+             }
+           }
         &>app-card-pg{
-            margin: 20px;
+          
         }
     }
 }

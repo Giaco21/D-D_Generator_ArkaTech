@@ -21,8 +21,29 @@ a:hover {
   font: 14px/22px "Lato", Arial, sans-serif;
   color: #A9A8A3;
   padding: 40px 0;
+  position: relative;
 }
+#download-button{
+  svg{
 
+    transition-duration: 0.5s;
+  }
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top:0px;
+  z-index: 9999999999999999999999999999;
+ &:hover{
+ 
+  svg{
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+   
+  }
+ }
+}
 .container {
   margin: 0 auto;
   max-width: 780px;
@@ -286,4 +307,11 @@ a[data-tooltip][data-placement="top"]::after {
   left: 20px;
   margin-bottom: 4px;
 }
-
+#controller{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  svg{
+    width: 60px;
+  }
+}

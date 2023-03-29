@@ -11,7 +11,9 @@ import html2canvas from 'html2canvas';
 })
 export class DetailsPgComponent {
 id:any
+pgPrevId:any
 pg:any
+pgNextId:any
 user:any
 constructor(private route: ActivatedRoute,private http:HttpClient) {
   
@@ -26,7 +28,14 @@ async ngOnInit() {
   this.http.get('http://localhost:8080/pg').subscribe(
     (response: any) =>{
       arrayPg = response
-    
+      for (let i = 0; i < arrayPg.length; i++) {
+        if (arrayPg[i].id==this.id) {
+          i==0?  this.pgPrevId=arrayPg[arrayPg.length-1]:this.pgPrevId=arrayPg[i-1].id
+          this.pg = arrayPg[i]
+          i==arrayPg.length-1? this.pgNextId=arrayPg[0]:this.pgNextId=arrayPg[i+1].id
+        }
+        
+      }
       this.pg = arrayPg.filter((ele:any)=>
         ele.id==this.id 
        )[0]

@@ -11,7 +11,6 @@
             width: 200px;
             height: 200px;
             background-color: black
-
         };
     }
     #body{
@@ -21,5 +20,15 @@
         display: flex;
        
         justify-content: center;
+    }
+}
+@media screen and (max-width: 600px) {
+	#containerHome{
+        flex-direction: column-reverse;
+    }
+    #body{
+        width: 100vw;
+        max-height: 85vh;
+        overflow-y: scroll;
     }
 }

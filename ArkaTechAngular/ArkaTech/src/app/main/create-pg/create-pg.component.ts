@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 // import * as saveAs from 'file-saver';
 import { PgServiceService } from 'src/app/service/pg-service.service';
-
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-create-pg',
   templateUrl: './create-pg.component.html',
@@ -75,7 +76,7 @@ export class CreatePgComponent {
     return this.createPgForm.controls['CHA'].value;
   }
   positionForm: number = 0;
-
+   jsonPg: any 
   arrayBackground: any;
   arrayRace: any;
   arrayAligmen: any = [' N', 'L/N', 'L/B', 'L/M', 'C/M', 'C/B', 'C/N'];
@@ -209,6 +210,7 @@ export class CreatePgComponent {
     let num = Math.round(Math.random() * 1000000000000);
     return num;
   }
+  fileUrl:any;
   createPg() {
     /** Usage returns typed data */
     // const data = fetch(`http://localhost:8080/pg`, {
@@ -220,7 +222,7 @@ export class CreatePgComponent {
     //   console.log(res)
     // });
 
-    let jsonPg: any = {
+     this.jsonPg = {
      
       userId: this.user.id,
       characterName: this.getCharacterName(),
@@ -260,17 +262,21 @@ export class CreatePgComponent {
         "First of all their character is NOT as dumb as is humanly possible which is 3, 3, 3 and even staying within that doesn't have to mean they are 'damaged' to the point of almost being an animal.",
     };
 
-    console.log(jsonPg);
+    console.log(this.jsonPg);
     console.log(this.arrayPg);
-    this.arrayPg.push(jsonPg);
+    this.arrayPg.push(this.jsonPg);
     localStorage.setItem('arrayPg', JSON.stringify(this.arrayPg));
     this.http
-      .post<any>('http://localhost:8080/pg', jsonPg)
+      .post<any>('http://localhost:8080/pg', this.jsonPg)
       .subscribe((response: any) => {
         console.log(response);
       });
 
-    console.log(jsonPg);
+    console.log(this.jsonPg);
+    const data = 'some text';
+    const blob = new Blob([this.jsonPg], { type: 'application/octet-stream' });
+
+    this.fileUrl = window.URL.createObjectURL(blob);
   }
 
   saveCharacterData() {
@@ -295,5 +301,17 @@ export class CreatePgComponent {
     const fileContent = JSON.stringify(characterData);
     const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
     // saveAs(blob, `${this.getCharacterName()}.txt`);
+  }
+  public openPDF(): void {
+    let DATA: any = document.getElementById('htmlData');
+    html2canvas(DATA).then((canvas) => {
+      let fileWidth = 208;
+      let fileHeight = (canvas.height * fileWidth) / canvas.width;
+      const FILEURI = canvas.toDataURL('image/png');
+      let PDF = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
+      PDF.save('angular-demo.pdf');
+    });
   }
 }

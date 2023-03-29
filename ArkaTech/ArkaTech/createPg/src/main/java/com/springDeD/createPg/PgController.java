@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,12 @@ public class PgController extends AbsPgsInterface {
     public List<Pg> getAllPg() {
         return PgRepository.findAll();
     }
-
+    // @CrossOrigin(origins = "http://localhost:4200/")
+    // @GetMapping("/pg/{id}")
+    // public Pg getPg(@PathVariable Long id) {
+    //     String sql = "SELECT * FROM pg WHERE id="+id;
+    //     return jdbcTemplate.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<>(Pg.class));
+    // }
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/pg")
     public ResponseEntity<Pg> createPg(@RequestBody Pg pg) {
@@ -53,8 +59,7 @@ public class PgController extends AbsPgsInterface {
             return false;
         }
     }
+ 
 
-    private boolean pgisPresent() {
-        return false;
-    }
+    
 }

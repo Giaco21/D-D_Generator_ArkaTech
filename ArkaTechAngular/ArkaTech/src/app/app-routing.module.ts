@@ -8,6 +8,7 @@ import { ArchivioComponent } from './main/archivio/archivio.component';
 import { CardUserComponent } from './main/cards/card-user/card-user.component';
 import { CompareComponent } from './main/compare/compare.component';
 import { CreatePgComponent } from './main/create-pg/create-pg.component';
+import { DetailsPgComponent } from './main/details-pg/details-pg.component';
 import { HomeComponent } from './main/home/home.component';
 
 const routes: Routes = [
@@ -16,9 +17,14 @@ const routes: Routes = [
   { path: 'crea', component: CreatePgComponent }, 
   { path: 'archivio', component: ArchivioComponent }, 
   { path: 'compare', component: CompareComponent }, 
+  { path: 'pg/:id', component: DetailsPgComponent }, 
   { path: 'aboutUs', component: AboutComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'signUp', component: SignUpComponent },
+  {
+    path: '**',
+    redirectTo: '404'
+  }
 ];
 
 @NgModule({

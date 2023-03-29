@@ -15,22 +15,18 @@ import java.util.function.Function;
 public abstract class AbsPgsInterface implements PgRepository {
 
 
-    @Override
     public Optional<Pg> findByPgname(String Pgname) {
         return Optional.empty ( );
     }
 
-    @Override
     public Optional<Pg> findByEmail(String email) {
         return Optional.empty ( );
     }
 
-    @Override
     public boolean existsByPgname(String Pgname) {
         return false;
     }
 
-    @Override
     public boolean existsByEmail(String email) {
         return false;
     }
@@ -71,8 +67,60 @@ public abstract class AbsPgsInterface implements PgRepository {
     }
 
     @Override
-    public Pg getById(Long aLong) {
-        return null;
+    public Pg getById(Long id) {
+        Pg Pg = new Pg();
+    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnd", "root", "Vivident.root");
+    PreparedStatement statement = connection.prepareStatement("SELECT * FROM pg Where Id="+id);
+    
+    ResultSet resultSet = statement.executeQuery()) {
+
+       Pg.setId (resultSet.getLong ("Id"));
+       Pg.setUserId (resultSet.getLong ("IDuser"));
+       Pg.setCharacterName(resultSet.getString("CharacterName"));
+       Pg.setRace(resultSet.getString("Race"));
+       Pg.setAlignment(resultSet.getString("Alignment"));
+       Pg.setClassLevel(resultSet.getInt("ClassLevel"));
+       Pg.setBackground(resultSet.getString("Background"));
+       Pg.setPersonalityTraits(resultSet.getString("PersonalityTraits"));
+       Pg.setIdeals(resultSet.getString("Ideals"));
+       Pg.setBonds(resultSet.getString("Bonds"));
+       Pg.setFlaws(resultSet.getString("Flaws"));
+       Pg.setXP(resultSet.getInt("XP"));
+       Pg.setSTR(resultSet.getInt("STR"));
+       Pg.setStrMod(resultSet.getInt("STRmod"));
+       Pg.setDEX(resultSet.getInt("DEX"));
+       Pg.setDexMod(resultSet.getInt("DEXmod"));
+       Pg.setCON(resultSet.getInt("CON"));
+       Pg.setConMod(resultSet.getInt("CONmod"));
+       Pg.setOINT(resultSet.getInt("OINT"));
+       Pg.setIntMod(resultSet.getInt("INTmod"));
+       Pg.setWIS(resultSet.getInt("WIS"));
+       Pg.setWisMod(resultSet.getInt("WISmod"));
+       Pg.setCHA(resultSet.getInt("CHA"));
+       Pg.setChaMod(resultSet.getInt("CHAmod"));
+       Pg.setPassive(resultSet.getInt("Passive"));
+       Pg.setProfBonus(resultSet.getInt("ProfBonus"));
+       Pg.setInitiative(resultSet.getInt("Initiative"));
+       Pg.setSpeed(resultSet.getInt("Speed"));
+       Pg.setHpMax(resultSet.getInt("HPMax"));
+       Pg.setHdTotal(resultSet.getInt("HDTotal"));
+       Pg.setHD(resultSet.getInt("HD"));
+       Pg.setRaceBonuses(resultSet.getString("RaceBonuses"));
+       Pg.setRaceAndFeatures(resultSet.getString("RaceAndFeatures"));
+       Pg.setFeaturesAndTraits(resultSet.getString("FeaturesAndTraits"));
+       Pg.setaClasse(resultSet.getString("Classe"));
+
+       
+       
+    
+    
+} catch ( SQLException e) {
+    
+}
+return Pg;
+
+
+       
     }
 
     @Override
@@ -147,7 +195,7 @@ public abstract class AbsPgsInterface implements PgRepository {
 
             while (resultSet.next()) {
                 Pg Pg = new Pg();
-                Pg.setId (resultSet.getLong ("id"));
+                Pg.setId (resultSet.getLong ("Id"));
                 Pg.setUserId (resultSet.getLong ("IDuser"));
                 Pg.setCharacterName(resultSet.getString("CharacterName"));
                 Pg.setRace(resultSet.getString("Race"));

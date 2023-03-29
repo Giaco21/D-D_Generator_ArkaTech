@@ -1,6 +1,6 @@
 
 <div class="movie-card">
-  
+  <button (click)="pdfDownload()">Download</button>
     <div class="container" >
       
       <a href="#"><img width="250px" src="../../../assets/{{pg.race}}.png" alt="cover" class="cover" /></a>
@@ -43,16 +43,22 @@
         <div class="column2">
             <label for="">Personality Traits: </label>
             <p>{{pg.personalityTraits}}</p>
+            <hr>
             <label for="">Ideals: </label>
             <p>{{pg.ideals}}</p>
+            <hr>
             <label for="">Bonds: </label>
             <p>{{pg.bonds}}</p>
+            <hr>
             <label for="">Flaws: </label>
-            <p>{{pg.Flaws}}</p>
+            <p>{{pg.flaws}}</p>
+            <hr>
             <label for="">Race Bonuses: </label>
             <p>{{pg.raceBonuses}}</p>
+            <hr>
             <label for="">Race And Features: </label>
             <p>{{pg.raceAndFeatures}}</p>
+            <hr>
             <label for="">Features And Traits: </label>
             <p>{{pg.featuresAndTraits}}</p>
           

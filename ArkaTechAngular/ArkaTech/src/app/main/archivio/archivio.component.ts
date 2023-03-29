@@ -76,7 +76,7 @@ export class ArchivioComponent {
       response =>{
         this.arrayPg = response
       
-        this.arrayPg = this.arrayPg.filter((ele:any)=>ele.userId==1)
+        this.arrayPg = this.arrayPg.filter((ele:any)=>ele.userId==this.user.id)
         console.log(this.arrayPg)
         console.log(response)
       }

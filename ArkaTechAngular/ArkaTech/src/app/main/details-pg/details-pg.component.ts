@@ -40,11 +40,12 @@ this.user = JSON.parse(localStorage.getItem("User") || "");
    this.user =  response;
    console.log(this.user)
  }) */
-}
-
-  async getData(http:HttpClient) {
-    
-   
-    }
 
 }
+pdfDownload(){
+  
+}
+
+}
+
+

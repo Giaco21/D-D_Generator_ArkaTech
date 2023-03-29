@@ -59,15 +59,17 @@ nav {
   float: left;
 	position: relative;
 	top: 0;
-  left: 0;
+	left: 0;
 	height: 100vh;
 	background: lightgray;
+	border-radius: 20px 20px 0px 0px;
 }
 
 nav ul {
 	text-align: center;
     max-height: 100vh;
     overflow: hidden;
+	border-radius: 20px 20px 0px 0px;
 }
 svg,img{
     width: 40px;
@@ -159,7 +161,7 @@ nav ul li div { position: relative; }
 
 @media screen and (max-width: 600px) {
 	nav{
-		height: 15vh;
+		border-radius: 20px 20px 0px 0px;
 	}
 	nav ul{
         display: flex;

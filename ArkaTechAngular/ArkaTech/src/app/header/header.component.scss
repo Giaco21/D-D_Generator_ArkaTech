@@ -62,14 +62,14 @@ nav {
 	left: 0;
 	height: 100vh;
 	background: lightgray;
-	border-radius: 20px 20px 0px 0px;
+	
 }
 
 nav ul {
 	text-align: center;
     max-height: 100vh;
     overflow: hidden;
-	border-radius: 20px 20px 0px 0px;
+
 }
 svg,img{
     width: 40px;
@@ -162,12 +162,15 @@ nav ul li div { position: relative; }
 @media screen and (max-width: 600px) {
 	nav{
 		border-radius: 20px 20px 0px 0px;
+		min-width: 100vw;
+		max-height: 20vh;
 	}
 	nav ul{
         display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
+		border-radius: 20px 20px 0px 0px;
     }
 }
 

@@ -22,7 +22,7 @@ a:hover {
 
   /* Quick on the way out */
   transition: 2s;
-
+  max-width: 100vw;
   font: 14px/22px "Lato", Arial, sans-serif;
   color: #A9A8A3;
   padding: 40px 0;
@@ -58,7 +58,6 @@ a:hover {
   margin: 0 auto;
   max-width: 780px;
   width: 100vw;
- height: 900px;
   background: #F0F0ED;
   border-radius: 5px;
 
@@ -94,17 +93,24 @@ a:hover {
 
 .cover {
   position: absolute;
-  top: 160px;
-  left: 40px;
-  z-index: 2;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
 
 }
 
 .details {
-  
-  padding: 190px 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 90%;
+  padding: 20px;
+  z-index: 99999999999999999999999;
   ul{
     display: flex;
+    flex-wrap: wrap;
+    z-index: 99999999999999999999999;
     li:first-child{
         background-color: #B1B0AC;
         color: #000;
@@ -115,6 +121,7 @@ a:hover {
         margin:5px 5px;
         background-color: rgb(65, 11, 11);
         border-radius: 5px;
+        z-index: 99999999999999999999999;
     }
 }
   
@@ -123,7 +130,7 @@ a:hover {
     font-size: 44px;
     margin-bottom: 13px;
     position: relative;
-    
+    z-index: 9999999999999;
     span {
       position: absolute;
       top: 3px;
@@ -133,7 +140,7 @@ a:hover {
       color: #544C21;
       font-size: 14px;
       padding: 0px 4px;
-      
+      z-index: 9999999999999;
     }
   }
 
@@ -142,6 +149,7 @@ a:hover {
     font-size: 23px;    
     font-weight: 300;
     margin-bottom: 15px;
+    z-index: 9999999999999;
   }
   
   
@@ -161,20 +169,20 @@ a:hover {
 
 .description {
   
-  bottom: 0px;
-  height: 200px;
+  z-index: 9999999999999;
+ 
   font-size: 16px;
-  line-height: 26px;
+ 
   color: #B1B0AC;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .column1 {
-  padding-left: 50px;
-  padding-top: 140px;
-  width: 220px;
-  float: left;
+ 
+
+ z-index: 9999999999999;
   text-align: center;
 }
 
@@ -195,12 +203,11 @@ a:hover {
 }
 
 .column2 {
-  padding-left: 41px;
-  padding-top: 30px;
-  margin-left: 20px;
-  width: 480px;
+  
+  padding: 20px;
+ max-width: 480px;
+ width: 100vw;
  
-  max-height: 400px;
   color:rgb(77, 75, 75);
   label{
     font-weight: 600;
@@ -325,5 +332,21 @@ a[data-tooltip][data-placement="top"]::after {
     width: 60px;
     fill: white;
     stroke: white;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column1 {
+    position: relative;
+  
+    width: 100vw;
+   z-index: 9999999999999;
+    text-align: center;
+  }
+  .description{
+    width: 100vw;
+    flex-direction: column;
+  }
+  .details{
+    height: 100%;
   }
 }

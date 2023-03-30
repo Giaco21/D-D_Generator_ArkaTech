@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CreatePgApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CreatePgApplication.class, args);
+		SpringApplication.run(CreatePgApplication.class, args); 
 	}
 
 }

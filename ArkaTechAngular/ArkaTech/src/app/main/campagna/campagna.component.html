@@ -1,18 +1,25 @@
-<div routerLink="crea">
-    Crea una campagna 
+<div id="option">
+    <div routerLink="crea">
+        Crea una campagna 
+    </div>
+    <h1 *ngIf="arrayMyCampagne.length!=0">
+        Le tue campagne da Master
+    </h1>
 </div>
-<h1>
-    Le tue campagne
-</h1>
 <section>
-    <div *ngIf="arrayCampagne.length==0" id="emptyCampagne">
+    <div *ngIf="arrayMyCampagne.length==0" id="emptyCampagne">
         <h1>Non hai nessuna campagna </h1>
         <div routerLink="crea">
             Crea una campagna 
         </div>
     </div>
-    <div *ngIf="arrayCampagne.length!=0" id="campagne">
-        <div *ngFor="let campagna of arrayCampagne">
+    <div *ngIf="arrayMyCampagne.length!=0" id="campagne">
+        <div *ngFor="let campagna of arrayMyCampagne">
+           <app-card-campagna [campagna]="campagna"></app-card-campagna>
+        </div>
+    </div>
+    <div *ngIf="arrayInCampagne.length!=0" id="campagne">
+        <div *ngFor="let campagna of arrayInCampagne">
            <app-card-campagna [campagna]="campagna"></app-card-campagna>
         </div>
     </div>

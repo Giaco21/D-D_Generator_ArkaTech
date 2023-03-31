@@ -25,6 +25,7 @@ import { AlertComponent } from './dialog/alert/alert.component';
 import { CampagnaComponent } from './main/campagna/campagna.component';
 import { CreaComponent } from './main/campagna/crea/crea.component';
 import { CardCampagnaComponent } from './main/cards/card-campagna/card-campagna.component';
+import { DetailComponent } from './main/campagna/detail/detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { CardCampagnaComponent } from './main/cards/card-campagna/card-campagna.
     CampagnaComponent,
     CreaComponent,
     CardCampagnaComponent,
+    DetailComponent,
   ],
   imports: [ 
     BrowserModule,

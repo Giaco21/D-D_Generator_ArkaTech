@@ -1,0 +1,10 @@
+<section>
+    <h2>Campagna {{campagna.name}} del Master  {{campagna.master.toUpperCase()}}</h2>
+    <div>
+       
+        <h3>Partecipati: </h3>
+        <div *ngFor="let user of campagna.users">
+            {{user}}
+        </div>
+    </div>
+</section>

@@ -1,4 +1,5 @@
 <section>
+    <h2>Dai un nome</h2>
     <form [formGroup]="createCampagna" (ngSubmit)="create()">
         <div class="user-box">
           <input type="text" name="" required="" formControlName="name">
@@ -8,4 +9,17 @@
           Crea
         </button>
       </form>
+
+      <div>
+        <h2>Invita un utente alla loby</h2>
+        <div *ngFor="let user  of arrayUsers">
+            {{user.username}}
+            <button (click)="add(user)">add</button>
+        </div>
+        <div *ngFor="let user  of arrayUsersSelected">
+            {{user.username}}
+            <button (click)="delete(user)">delete</button>
+        </div>
+      </div>
+      
 </section>

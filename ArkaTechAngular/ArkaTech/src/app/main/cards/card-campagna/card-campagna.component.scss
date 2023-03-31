@@ -91,11 +91,14 @@
     color: white;
     h2{
         font-size: 26px;
+        font-weight: bolder;
         color: rgb(71, 14, 14);
+        background-color: rgba(249, 245, 245, 0.326);
     }
     h4{
         background-color:  rgb(71, 14, 14);
         padding: 10px;
+        margin-bottom: 10px;
     }
   }
   .card:hover .title {

@@ -1,8 +1,14 @@
+*{
+    color: white;
+}
+#option{
+    padding-left: 80px;
+}
 section{
     min-height: 100vh;
     display: flex;
     width: 100vw;
-   
+   padding-left: 50px;
     overflow-x:scroll;
     #emptyCampagne{
         color: white;

@@ -1,0 +1,26 @@
+#container_pg{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    .value{
+        
+        
+    }
+    &>div{
+       width:50vw;
+       word-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+       padding: 20px;
+       img{
+        height: 250px;
+        max-width: 180px;
+       }
+    }
+    &>div:last-child{
+        // display: flex;
+        // flex-direction: row-reverse;
+    }
+}

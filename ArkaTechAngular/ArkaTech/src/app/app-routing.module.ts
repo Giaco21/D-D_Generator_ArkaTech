@@ -5,6 +5,8 @@ import { SignUpComponent } from './log/sign-up/sign-up.component';
 import { HomeLogComponent } from './logUser/home-log/home-log.component';
 import { AboutComponent } from './main/about/about.component';
 import { ArchivioComponent } from './main/archivio/archivio.component';
+import { CampagnaComponent } from './main/campagna/campagna.component';
+import { CreaComponent } from './main/campagna/crea/crea.component';
 import { CardUserComponent } from './main/cards/card-user/card-user.component';
 import { CompareComponent } from './main/compare/compare.component';
 import { CreatePgComponent } from './main/create-pg/create-pg.component';
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'crea', component: CreatePgComponent }, 
   { path: 'archivio', component: ArchivioComponent }, 
   { path: 'compare', component: CompareComponent }, 
+  { path: 'campagna', component: CampagnaComponent }, 
+  { path: 'campagna/crea', component: CreaComponent }, 
   { path: 'pg/:id', component: DetailsPgComponent }, 
   { path: 'aboutUs', component: AboutComponent }, 
   { path: 'login', component: LoginComponent },

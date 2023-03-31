@@ -22,6 +22,9 @@ import { CompareComponent } from './main/compare/compare.component';
 import { DetailsPgComponent } from './main/details-pg/details-pg.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertComponent } from './dialog/alert/alert.component';
+import { CampagnaComponent } from './main/campagna/campagna.component';
+import { CreaComponent } from './main/campagna/crea/crea.component';
+import { CardCampagnaComponent } from './main/cards/card-campagna/card-campagna.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +43,9 @@ import { AlertComponent } from './dialog/alert/alert.component';
     CompareComponent,
     DetailsPgComponent,
     AlertComponent,
+    CampagnaComponent,
+    CreaComponent,
+    CardCampagnaComponent,
   ],
   imports: [ 
     BrowserModule,

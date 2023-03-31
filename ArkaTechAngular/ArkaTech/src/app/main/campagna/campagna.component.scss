@@ -1,0 +1,16 @@
+section{
+    min-height: 100vh;
+    display: flex;
+    width: 100vw;
+   
+    overflow-x:scroll;
+    #emptyCampagne{
+        color: white;
+        
+    }
+    #campagne{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+}

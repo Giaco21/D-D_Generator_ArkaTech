@@ -39,13 +39,21 @@ arrayUsers:any
     let arrayCampagne:any = JSON.parse( localStorage.getItem("arrayCampagne")||"[]");
     let arrayUsersId:any=[]
     this.arrayUsersSelected.forEach((obj:any) => {
-      arrayUsersId.push(obj.username)
+      let jsonUserInvited = {
+        username:obj.username,
+        pg:18,
+        approved:false,
+        pEx:0,
+        
+      }
+      arrayUsersId.push(jsonUserInvited)
     });
     let jsoCampagna= {
       name:this.createCampagna.controls['name'].value,
       users:arrayUsersId,
       master:this.user.username,
       description:this.createCampagna.controls['description'].value,
+
     }
     
     arrayCampagne.push(jsoCampagna)

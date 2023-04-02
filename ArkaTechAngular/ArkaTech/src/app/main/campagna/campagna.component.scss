@@ -1,22 +1,30 @@
 *{
     color: white;
 }
-#option{
-    padding-left: 80px;
-}
+
 section{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     width: 100vw;
-   padding-left: 50px;
-    overflow-x:scroll;
-    #emptyCampagne{
-        color: white;
-        
+   padding-left: 100px;
+    overflow-x:none;
+    button{
+        color: black;
     }
-    #campagne{
-        display: flex;
-        align-items: center;
-        position: relative;
+    &>div{
+       
+        &>div{
+           padding: 10px;
+            display: flex;
+           
+           
+            overflow-x: scroll;
+           
+        }
+       h1{
+       
+       }
     }
+   
 }

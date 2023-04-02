@@ -58,7 +58,7 @@ export class LoginComponent {
       console.log('loggato');
       localStorage.setItem( 'User',JSON.stringify(user));
       localStorage.setItem("arrayPg", JSON.stringify([]));
-      localStorage.setItem("arrayCampagne", JSON.stringify([]));
+      // localStorage.setItem("arrayCampagne", JSON.stringify([]));
       window.location.href = 'http://localhost:4200/';
     } else {
       alert('dati non validi');

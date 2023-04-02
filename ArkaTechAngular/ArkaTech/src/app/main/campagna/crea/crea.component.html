@@ -2,24 +2,32 @@
     <h2>Dai un nome</h2>
     <form [formGroup]="createCampagna" (ngSubmit)="create()">
         <div class="user-box">
-          <input type="text" name="" required="" formControlName="name">
           <label>nome</label>
+          <input type="text" name="" required="" formControlName="name">
         </div>
+        <div class="user-box">
+          <label>Descrizione</label>
+          <input type="text" name="" required="" formControlName="description">
+        </div>
+        <div id="invite">
+         <div>
+          <h2>Invita un utente alla loby</h2>
+          <div *ngFor="let user  of arrayUsers" class="user">
+              {{user.username}}
+              <button (click)="add(user)" class="add">add</button>
+          </div>
+          <div *ngFor="let user  of arrayUsersSelected" class="selected user ">
+            {{user.username}}
+            <button (click)="delete(user)" class="delete">delete</button>
+         </div>
+         
+          </div>
+        </div>
+        
         <button>
           Crea
         </button>
       </form>
 
-      <div>
-        <h2>Invita un utente alla loby</h2>
-        <div *ngFor="let user  of arrayUsers">
-            {{user.username}}
-            <button (click)="add(user)">add</button>
-        </div>
-        <div *ngFor="let user  of arrayUsersSelected">
-            {{user.username}}
-            <button (click)="delete(user)">delete</button>
-        </div>
-      </div>
-      
 </section>
+  

@@ -12,6 +12,7 @@ export class CreaComponent {
 arrayUsers:any
   createCampagna = new FormGroup({
     name: new FormControl(''),
+    description: new FormControl('')
   });
   arrayUsersSelected:any=[]
   ngOnInit() {
@@ -43,7 +44,8 @@ arrayUsers:any
     let jsoCampagna= {
       name:this.createCampagna.controls['name'].value,
       users:arrayUsersId,
-      master:this.user.username
+      master:this.user.username,
+      description:this.createCampagna.controls['description'].value,
     }
     
     arrayCampagne.push(jsoCampagna)

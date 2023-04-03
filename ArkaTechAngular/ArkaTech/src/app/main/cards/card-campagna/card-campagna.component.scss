@@ -9,7 +9,7 @@
   }
 
   .card {
-    max-width: 400px;
+    max-width: 350px;
     width: 90vw;
     min-width: 350px;
     min-height: 470px;
@@ -24,13 +24,14 @@
   
   .cover-image {
     
-  
+    max-width: 350px;
   }
   
   .wrapper {
     transition: all 0.5s;
     position: absolute;
     width: 100%;
+    max-width: 350px;
     z-index: -1;
   }
   
